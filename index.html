@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ivan Kapunac">
+    <meta name="description" content="VanillaJS table updating. Advanced ToDoList. Viable for editing and inserting new options easily">
+    <link rel="stylesheet" href="style.css">
+    <title>Work Attendence NoteBook</title>
+    <script src="app.js" defer></script>
+</head>
+<body> 
+    <div id="container">
+        <div id="table-container">
+                <table id="table">
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Date</th>
+                        <th>Hours Worked</th>
+                      </tr>
+                    <tbody>
+
+                    </tbody>
+                </table>
+        </div>
+        <div class="formGroup field">
+        <form id="form" onsubmit="event.preventDefault();onFormSubmit()" autocomplete="off">
+            
+            <label for="name" class="formLabel">Name:</label>
+            <input type="input" class="formField" placeholder="Name" name="name" id="name" required>
+            <label for="date" class="formLabel">Date:</label>
+            <input type="date" class="formField" placeholder="Date" name="date" id="date" required>
+            <label for="hours" class="formLabel">Spent Hours:</label>
+            <input type="input" class="formField" placeholder="Hours" name="hours" id="hours" required>
+            <button id="btn">SUBMIT</button>
+        </form>
+        </div>
+        
+</div>
+
+
+</body>
+</html>

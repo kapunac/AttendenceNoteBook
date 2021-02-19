@@ -1,0 +1,154 @@
+/* Variables */
+:root{
+--primary: #11998e;
+--secondary: #38ef7d;
+--white: #fff;
+--gray: #9b9b9b;
+}
+/* Basic */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  background-color: #222;
+}
+/* Table Styles */
+table{
+  width:100%;
+}
+table,tr,th,td{
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-collapse: collapse;
+  padding: 10px 20px;
+  margin: 10px;
+}
+#table-container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Form Styles */
+.formGroup {
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.formField {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.formField::placeholder {
+  color: transparent;
+}
+
+.formField:placeholder-shown ~ .formLabel {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+.formLabel {
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+.formField {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+.formLabel {
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
+}
+
+/* reset */
+
+.formField:required, .formField:invalid {
+  box-shadow: none;
+} 
+
+/* Button Styles */
+#btn{
+  margin: 20px;
+  padding: 5px 20px;
+  color: #11998e;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+a{
+  cursor: pointer;
+}
+a:hover{
+  color:red;
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+/* Break tradicional table look */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { 
+    border: 1px solid #ccc; 
+  }
+	
+	td { 
+		/* Behave  like a row */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+}
